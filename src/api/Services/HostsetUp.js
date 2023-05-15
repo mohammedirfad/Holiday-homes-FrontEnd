@@ -344,7 +344,7 @@ export const getHostData= async (filterName) => {
     try{
         const response = await axios({
             method: 'GET',
-            url:`/admin/getHostdata?filter=${filterName}`,
+            url:`/getHostdata?filter=${filterName}`,
             // headers: {
             //     Authorization: `Bearer ${token}`,
             //   },
