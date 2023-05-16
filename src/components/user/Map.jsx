@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
 import { useRef } from 'react';
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 const Map = ({ location }) => {
