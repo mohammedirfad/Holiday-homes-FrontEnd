@@ -299,14 +299,14 @@ export const adminLogin= async (email,password) => {
 }
 
 
-export const hostApprovel= async (id) => {
+export const hostApprovel= async (id,token) => {
     try{
         const response = await axios({
             method: 'post',
             url: '/admin/adminapprovel',
-            // headers: {
-            //     Authorization: `Bearer ${token}`,
-            //   },
+            headers: {
+                Authorization: `Bearer ${token}`,
+              },
             data: {
                 id
             }
@@ -320,14 +320,14 @@ export const hostApprovel= async (id) => {
 }
 
 
-export const hostRejected= async (id) => {
+export const hostRejected= async (id,token) => {
     try{
         const response = await axios({
             method: 'post',
             url: '/admin/adminrejected',
-            // headers: {
-            //     Authorization: `Bearer ${token}`,
-            //   },
+            headers: {
+                Authorization: `Bearer ${token}`,
+              },
             data: {
                 id
             }
