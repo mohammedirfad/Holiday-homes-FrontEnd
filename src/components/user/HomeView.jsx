@@ -88,18 +88,18 @@ function HomeView() {
         try{
            const response = await getHostData(selectedFilter);
            console.log(response,1);
-           console.log(response.data,"123123111111111111");
-           setFilteredData(response.data)
+           console.log(response?.data,"123123111111111111");
+           setFilteredData(response?.data)
            setIsLoading(false);
          
            setError(null);
         }
         catch(err){
            setIsLoading(false);
-           setError(err.response.data.message);
+           setError(err?.response?.data?.message);
         }
        
-//        fetchUser();
+       fetchUser();
 //        console.log(users,">>>>>>>>>>>>0000>>>>>>>>>>>>>>>>>>")
 }
       useEffect( ()=>{
@@ -131,10 +131,10 @@ function HomeView() {
       className={`flex flex-col items-center p-2  hover:text-black hover:border-b-2 hover:border-black ${
         selectedFilter === filter.name ? 'text-black border-b-2 border-black' : ''
       }`}
-      onClick={() => handleFilterClick(filter.name)}
+      onClick={() => handleFilterClick(filter?.name)}
     >
-      <span className="text-xl text-gray-500 ">{filter.icon}</span>
-      <span className='text-sm text-gray-500  pb-1'>{filter.name}</span>
+      <span className="text-xl text-gray-500 ">{filter?.icon}</span>
+      <span className='text-sm text-gray-500  pb-1'>{filter?.name}</span>
     </button>
   ))}
 </div>
