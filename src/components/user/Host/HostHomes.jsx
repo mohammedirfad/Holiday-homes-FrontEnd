@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CgHome } from 'react-icons/cg';
 import { GiBurningForest } from 'react-icons/gi';
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import 'mapbox-gl/dist/mapbox-gl.css';
 import Location from '../Host/Location';
 import host from '../../../Asset/host.jpg';
 import {useNavigate} from 'react-router-dom'

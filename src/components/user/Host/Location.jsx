@@ -1,7 +1,7 @@
 import React ,{useEffect, useState}from 'react';
 import {Box} from '@mui/material';
 import ReactMapGL,{GeolocateControl, LngLat, Marker, NavigationControl} from 'react-map-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import 'mapbox-gl/dist/mapbox-gl.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLocation } from '../../../Store/features/UserLocationSlice';
 import Geocoder from './Geocoder';
