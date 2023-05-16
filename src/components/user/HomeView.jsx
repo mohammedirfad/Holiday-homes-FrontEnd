@@ -84,7 +84,7 @@ function HomeView() {
       ];
 
     const getHost = async (selectedFilter) =>{
-    // const fetchUser = async () =>{
+    const fetchUser = async () =>{
         try{
            const response = await getHostData(selectedFilter);
            console.log(response,1);
