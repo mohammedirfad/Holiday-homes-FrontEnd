@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 function UserPrivateRoutes() {
     const clientToken = useSelector(state => state.userAuth.token);
-    alert("kjshuyfegwygw7e",clientToken)
+
 
   return (
 

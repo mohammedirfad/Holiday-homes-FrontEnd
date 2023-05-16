@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserLogin } from "../../api/Services/UserAuth.js";
 import { OtpSubmit } from "../../api/Services/UserAuth.js";
 import { useDispatch } from "react-redux";
-import { setLogin } from '../../Store/features/authSlice'
+import { setLogin, setLogout } from '../../Store/features/authSlice'
 import { useSelector } from 'react-redux';
 import axios from '../../api/Axios.js';
 import queryString from 'query-string'
@@ -303,6 +303,19 @@ console.log(response,"<><><>")
 
    const signup_Modal = () => { setSignupModal(!signupModal) }
 
+
+   const HandleLogout = () =>{
+      dispatch(
+         setLogout({
+            user: "",
+            name: null,
+            token: null,
+            id: null,
+            imageUrl : null
+         })
+      )
+   }
+
    return (
       <div className="">
       {  Nav && <div className='w-screen absolute h-screen bg-gray-200 opacity-30' onClick={sideMenus}></div>}
@@ -398,7 +411,7 @@ console.log(response,"<><><>")
     <hr className='mt-2'></hr>
     <h1 className='my-1 font-semibold' onClick={()=>navigate('/hosting')}>view Listing</h1>
     <h1 className='my-1 font-semibold' onClick={()=>navigate('/chat')}>Help</h1>
-    <h1 className='my-1 font-semibold' >Logout</h1>
+    <h1 className='my-1 font-semibold' onClick={HandleLogout}>Logout</h1>
  
    </div>
  </div>
