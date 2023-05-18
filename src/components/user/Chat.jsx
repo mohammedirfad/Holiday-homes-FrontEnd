@@ -24,7 +24,7 @@ function Chat() {
 
 
     useEffect(()=>{
-        socket.current = io('https://holiday-homes-socketio.onrender.com');
+        socket.current = io('https://holiday-home.onrender.com');
         socket.current.emit('new-user-add' , id);
         socket.current.on('get-users', (users)=>{
             setOnlineUsers(users);
