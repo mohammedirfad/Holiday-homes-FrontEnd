@@ -148,6 +148,7 @@ export const hostAmenities= async (Amenities,host,token) => {
 }
 
 export const hostImages= async (formData,host,token) => {
+    console.log(formData,host,token)
     try{
         const response = await axios({
             method: 'post',

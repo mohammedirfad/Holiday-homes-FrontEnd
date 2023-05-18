@@ -12,9 +12,9 @@ function Image(){
 
     const [files, setFiles] = useState([]);
     const token = useSelector(state => state.userAuth.token);
-    console.log(token,host_id)
+  
     const host_id = useSelector(state => state.Hostslice1.host_id);
-
+    console.log(token,host_id)
   const handleDelete = (fileIndex) => {
     setFiles((prevFiles) => prevFiles.filter((_, index) => index !== fileIndex));
   };

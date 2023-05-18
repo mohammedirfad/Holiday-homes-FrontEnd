@@ -295,7 +295,7 @@ console.log(response,"<><><>")
 
    }
 
-   const NavModal = () => { setNav(!Nav) }
+   const NavModal = () => { setNav(!Nav)  }
 
    const sideMenus = () => {setSideMenu(!sideMenu) }
 
@@ -319,7 +319,8 @@ console.log(response,"<><><>")
    return (
       <div className="">
       {  Nav && <div className='w-screen absolute h-screen bg-gray-200 opacity-30' onClick={sideMenus}></div>}
-
+      {  signupModal && <div className='w-screen absolute h-screen bg-gray-200 opacity-30' onClick={sideMenus}></div>}
+      {  otpModal && <div className='w-screen absolute h-screen bg-gray-200 opacity-30' onClick={sideMenus}></div>}
          <header className='p-4 flex justify-between border border-gray-200'>
             <Link to='/hostings' className='flex items-center gap-1 '>
                <h3 className='font-bold '><GiBurningForest className="text-3xl h-8" onClick={()=>navigate('/hosting')} /></h3>
