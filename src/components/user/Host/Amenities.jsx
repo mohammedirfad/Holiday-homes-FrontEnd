@@ -254,12 +254,7 @@ function Amenities() {
                 {/* <div>Checked items: {JSON.stringify(checkedItems)}</div> */}
                 
             </div>
-            <div className=' items-center flex flex-col mt-6  duration-75 my-auto '>
-                <div className='justify-center flex flex-col delay-1000 mx-auto md:mx-auto'>
-                    <h1 className='font-semibold text-3xl md:4xl mx-2 font-sans'>Tell guests what your place has to offer </h1>
-                    <h1 className='text-md md:text-lg text-gray-500 mt-2 mx-2'>You can add more amenities after you publish your listing.</h1>
-                </div>
-            </div>
+            
         </div>
         <ProgressComponent link={HOST_PHOTOS} handler={handleNext}/>
     </>

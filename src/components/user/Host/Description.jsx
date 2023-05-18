@@ -171,7 +171,6 @@ const handleNext = async () => {
 
 
 
-            "selected" :{selectedOption}
 
             </div>
 

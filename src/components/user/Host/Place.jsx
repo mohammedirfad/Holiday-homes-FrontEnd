@@ -315,7 +315,6 @@ console.log("ivade inde.....")
                     </div>
 
 
-"selected" :{selectedOption}
                 </div>
 
             </div>
