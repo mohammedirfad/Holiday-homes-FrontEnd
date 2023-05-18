@@ -148,7 +148,10 @@ export const hostAmenities= async (Amenities,host,token) => {
 }
 
 export const hostImages= async (formData,host,token) => {
-    console.log(formData,host,token)
+    console.log(formData,host,token);
+    const datas ={
+        formData,host
+    }
     try{
         const response = await axios({
             method: 'post',
@@ -157,9 +160,7 @@ export const hostImages= async (formData,host,token) => {
                 Authorization: `Bearer ${token}`,
                 'Content-Type': 'multipart/form-data'
               },
-            data: {
-                formData,host
-            }
+            data:datas
         });
         const data = response
         if(data) return data;
@@ -170,6 +171,8 @@ export const hostImages= async (formData,host,token) => {
 }
 
 export const hostPrice= async (Price,host,token) => {
+
+   
     try{
         const response = await axios({
             method: 'post',
