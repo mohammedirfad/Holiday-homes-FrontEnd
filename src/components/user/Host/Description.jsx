@@ -175,7 +175,7 @@ const handleNext = async () => {
             </div>
 
         </div>
-        <ProgressComponent link={ADD_MORE} handler={handleNext}/>
+        <ProgressComponent link={ADD_MORE} handler={handleNext} className='mt-10'/>
         </>
     )
 }

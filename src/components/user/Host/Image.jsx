@@ -12,6 +12,7 @@ function Image(){
 
     const [files, setFiles] = useState([]);
     const token = useSelector(state => state.userAuth.token);
+    console.log(token,host_id)
     const host_id = useSelector(state => state.Hostslice1.host_id);
 
   const handleDelete = (fileIndex) => {
@@ -28,7 +29,7 @@ function Image(){
     if (!result.destination) return;
 
     const filesCopy = Array.from(files);
-    console.log(filesCopy,"sdfffffffffffffffffff")
+
     const [reorderedFile] = filesCopy.splice(result.source.index, 1);
     filesCopy.splice(result.destination.index, 0, reorderedFile);
 
@@ -75,10 +76,11 @@ function Image(){
       base64s.push(base);
     }
      
+    console.log(base64s)
 
     const response = await hostImages(base64s,host_id,token);
 
-    if(response.status === 200){
+    if(response?.status === 200){
       console.log(response,"/////////////////////")
     }
     
@@ -162,7 +164,7 @@ function Image(){
          </div>
 
         </div>
-         <ProgressComponent link={FINISH_SETUP} handler={handleNext}/>
+         <ProgressComponent link={FINISH_SETUP} handler={handleNext} className="mb-10"/>
          </>
     )
 }

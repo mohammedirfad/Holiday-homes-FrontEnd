@@ -8,6 +8,7 @@ function Price(){
     const [price,setPrice]=useState(1400);
     const token = useSelector(state => state.userAuth.token);
     const host_id = useSelector(state => state.Hostslice1.host_id);
+    
 
     const Incrementprice = () => setPrice(price + 1);
     const Decrementprice = () => setPrice(price - 1);
