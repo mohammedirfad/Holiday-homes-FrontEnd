@@ -55,7 +55,7 @@ function HostPendingList({ status }) {
     console.log(id)
     const response = await hostApprovel(id,token);
     if(response.status === 200){
-      alert("approved")
+  
       setShowAll(false)
       setReload(true)
     }
@@ -65,7 +65,7 @@ function HostPendingList({ status }) {
     console.log(id)
     const response = await hostRejected(id,token);
     if(response.status === 200){
-      alert("rejected")
+
       setShowAll(false)
       setReload(true)
     }

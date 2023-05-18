@@ -39,7 +39,7 @@ function User() {
       {/* CLIENT-PROTECTED-PAGE */}
 
       <Route element={<ClientPrivateRoutes />}>
-      <Route path='/hostings' element={<Hosting />} />
+      <Route path='/hosting' element={<Hosting />} />
       <Route path='/booking/:id' element={<Booking/>} />
       <Route path='/Mybookings' element={<MyBookings/>} />
       <Route path='/Mybookings/:id' element={<SingleDetails/>} />

@@ -61,7 +61,7 @@ function Image(){
   
 
     
-    console.log(files,"////////////////////////////")
+ 
 
     try{
 
@@ -74,11 +74,15 @@ function Image(){
       var base = await convertBase64(files[i]);
       base64s.push(base);
     }
-     console.log("hweeeeeeeeeeeeeeeeeeeeeeeeeereeeeeeeeeeee")
+     
 
     const response = await hostImages(base64s,host_id,token);
+
+    if(response.status === 200){
+      console.log(response,"/////////////////////")
+    }
     
-    console.log(response,"/////////////////////")
+    console.log(response,"/////////////0000////////")
   }
   catch(err){
     console.log(err)

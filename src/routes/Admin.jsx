@@ -9,6 +9,7 @@ import BankDetailsform from '../pages/admin/BankDetailsform';
 import ListOrdres from '../pages/admin/ListOrdres';
 import ErrorPage from '../components/admin/ErrorPage';
 import Complaint from '../pages/admin/Complaint';
+import AdminPrivateRoute from '../Utils/AdminPrivateRoutes';
 
 function Admin() {
     return (
@@ -17,12 +18,15 @@ function Admin() {
 
               <Routes>
               <Route path="/" element={<AdminLogin />} />
+
+                <Route element={<AdminPrivateRoute/>}>
                  <Route path="/home" element={<MainBg />} />
                  <Route path="/HostVerification" element={<HostVerify />} />
                  <Route path="/paymentrequests" element={<HostPaymentRequest />} />
                  <Route path="/proccedPayment/:id" element={<BankDetailsform />} />
                  <Route path="/orders" element={<ListOrdres />} />
                  <Route path="/Complaints" element={<Complaint />} />
+                 </Route>
 
                  <Route path="/*" element={<ErrorPage />} />
               </Routes>

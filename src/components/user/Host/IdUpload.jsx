@@ -21,7 +21,7 @@ function IdUpload() {
    console.log("200",IdTypes)
    
 
-   alert(hostid,IdTypes)
+   
    
 
    const handleFrontImageChange = (event) => {
