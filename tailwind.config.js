@@ -34,7 +34,7 @@ module.exports = {
 
       },
       backgroundImage:{
-        "login" :"url('/public/images/Login-bg.jpeg')",
+        "login" :"url('/public/    se/Login-bg.jpeg')",
         "host"  :"url('/public/images/host.jpg')"
       }
     },

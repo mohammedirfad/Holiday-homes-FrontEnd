@@ -12,7 +12,7 @@ function Conversation({data , currentUser,online}) {
         const userId = data.members.find((id) =>id!==currentUser);
 
         const getUserData = async () =>{
-            const response = await getUsers(userId,token);
+            const response  = await getUsers(userId,token);
             console.log(response,"here")
             if(response?.status === 200){
               setUserData(response?.data)
