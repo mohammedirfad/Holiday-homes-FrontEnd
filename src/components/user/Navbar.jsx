@@ -142,6 +142,7 @@ const setjobsearch=(event)=>{
             setNav(false)
             setotpModal(false)
             setSignupModal(true)
+            setSideMenu(false)
          }
 
       }
@@ -153,7 +154,7 @@ const setjobsearch=(event)=>{
    //OTP-HANDLING...
    async function handleSubmitotp(e) {
       e.preventDefault();
-      console.log("!!!!!", otp);
+   
       try {
          const response = await OtpSubmit(otp, num)
 
@@ -190,7 +191,7 @@ const setjobsearch=(event)=>{
    const handleRegister = async (e) => {
       e.preventDefault();
       try {
-         console.log(RegForm, "<>>>>>>>>>>>>>>>>>>>>>>")
+        
 
          const FirstName = RegForm.current.FirstName.value;
          const LastName = RegForm.current.LastName.value;
@@ -249,7 +250,7 @@ const setjobsearch=(event)=>{
    //Google-Auth
 
    const googleAuth = async (datas) => {
-      console.log(datas)
+   
       try {
          const response = await axios({
             url: "/google-Auth",
@@ -263,7 +264,6 @@ const setjobsearch=(event)=>{
             setNav(false)
             setotpModal(false)
             setSignupModal(false)
-            
             setSideMenu(false)
 
             
@@ -396,7 +396,7 @@ console.log(response,"<><><>")
 
 
 {
-   sideMenu && <div className='flex flex-col bg-white absolute right-0 mx-5 rounded-md border border-gray-300 shadow-md'>
+   sideMenu &&  <div className='flex flex-col bg-white absolute right-0 mx-5 rounded-md border border-gray-300 shadow-md'>
    <div className='mx-10 my-3 flex flex-col '>
    {
       !token && <>
