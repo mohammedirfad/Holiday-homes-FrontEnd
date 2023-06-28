@@ -163,7 +163,7 @@ const setjobsearch=(event)=>{
             console.log(response?.data);
             setNav(false);
             setSignupModal(false);
-            setotpModal(false);
+            setotpModal(true);
             setSideMenu(false)
 
             dispatch(
@@ -214,7 +214,7 @@ const setjobsearch=(event)=>{
          if (res.status === 201) {
             setNav(false)
             setotpModal(false)
-            setSignupModal(false)
+            setSignupModal(true)
             
             setSideMenu(false)
 
